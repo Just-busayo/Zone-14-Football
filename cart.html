@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="page-cart">
+    <header>
+        <table border="1" width="100%">
+            <tr>
+                <td width="25%" align="center">
+                    <img src="images/logo.jpg" alt="Sports Updates logo" width="120" height="60">
+                </td>
+                <td width="75%" align="center">
+                    <h1>Zone14 Football</h1>
+                    <p>Your daily sports news, trends, and products in one place.</p>
+                </td>
+            </tr>
+        </table>
+    </header>
+
+    <nav>
+        <table border="1" width="100%">
+            <tr>
+                <td width="16.66%" align="center"><a href="index.html">Home</a></td>
+                <td width="16.66%" align="center"><a href="news.html">News</a></td>
+                <td width="16.66%" align="center"><a href="highlights.html">Highlights</a></td>
+                <td width="16.66%" align="center"><a href="product.html">Our Products</a></td>
+                <td width="16.66%" align="center"><a href="about.html">About Us</a></td>
+                <td width="16.66%" align="center"><a href="contact.html">Contact Us</a></td>
+            </tr>
+        </table>
+    </nav>
+
+    <main>
+        <section>
+            <table border="1" width="100%">
+                <tr>
+                    <td align="center">
+                        <h2>Shopping Cart</h2>
+                    </td>
+                </tr>
+            </table>
+        </section>
+
+        <section>
+            <table border="1" width="100%">
+                <tr>
+                    <th>Remove</th>
+                    <th>Image</th>
+                    <th>Product</th>
+                    <th>Price</th>
+                    <th>Quantity</th>
+                    <th>Subtotal</th>
+                </tr>
+                <tr>
+                    <td align="center"><button type="button">X</button></td>
+                    <td align="center"><img src="images/gk gloves.jpg" width="160" height="180" alt="Special edition Adidas gloves"></td>
+                    <td align="center"><h3>Special Edition Adidas Gloves</h3></td>
+                    <td align="center"><h4>&#8358;25,000</h4></td>
+                    <td align="center"><input type="number" name="qty-gloves" id="qty-gloves" min="1" max="10" value="1"></td>
+                    <td align="center"><h4>&#8358;25,000</h4></td>
+                </tr>
+                <tr>
+                    <td align="center"><button type="button">X</button></td>
+                    <td align="center"><img src="images/shin guards.jpg" width="160" height="180" alt="Shin guards"></td>
+                    <td align="center"><h3>Shin Guards</h3></td>
+                    <td align="center"><h4>&#8358;10,000</h4></td>
+                    <td align="center"><input type="number" name="qty-shinguards" id="qty-shinguards" min="1" max="10" value="1"></td>
+                    <td align="center"><h4>&#8358;10,000</h4></td>
+                </tr>
+                <tr>
+                    <td colspan="5" align="right"><strong>Total</strong></td>
+                    <td align="center"><strong>&#8358;35,000</strong></td>
+                </tr>
+            </table>
+        </section>
+
+        <section>
+            <table border="1" width="100%">
+                <tr>
+                    <td align="center">
+                        <a href="checkout.html">Proceed to Checkout</a>
+                    </td>
+                </tr>
+            </table>
+        </section>
+    </main>
+
+    <footer>
+        <table border="1" width="100%">
+            <tr>
+                <td align="center">
+                    <p>Zone14 Football. Copyright &copy; 2026. All rights reserved.</p>
+                </td>
+                <td width="20%" align="center">
+                    <img src="images/brand-icons/facebook.svg" width="40" height="40" alt="Facebook">
+                    <img src="images/brand-icons/instagram.svg" width="40" height="40" alt="Instagram">
+                    <img src="images/brand-icons/telegram.svg" width="40" height="40" alt="Telegram">
+                    <img src="images/brand-icons/x.svg" width="40" height="40" alt="X">
+                </td>
+            </tr>
+        </table>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

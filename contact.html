@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="page-contact">
+    <header>
+        <table border="1" width="100%">
+            <tr>
+                <td width="25%" align="center">
+                    <img src="images/logo.jpg" alt="Sports Updates logo" width="120" height="60">
+                </td>
+                <td width="75%" align="center">
+                    <h1>Zone14 Football</h1>
+                    <p>Your daily sports news, trends, and products in one place.</p>
+                </td>
+            </tr>
+        </table>
+    </header>
+
+    <nav>
+        <table border="1" width="100%">
+            <tr>
+                <td width="16.66%" align="center"><a href="index.html">Home</a></td>
+                <td width="16.66%" align="center"><a href="news.html">News</a></td>
+                <td width="16.66%" align="center"><a href="highlights.html">Highlights</a></td>
+                <td width="16.66%" align="center"><a href="product.html">Our Products</a></td>
+                <td width="16.66%" align="center"><a href="about.html">About Us</a></td>
+                <td width="16.66%" align="center"><a href="contact.html">Contact Us</a></td>
+            </tr>
+        </table>
+    </nav>
+
+    <main>
+        <section>
+            <table border="1" width="100%">
+                <tr>
+                    <td align="center">
+                        <h2>Contact Us</h2>
+                    </td>
+                </tr>
+            </table>
+        </section>
+
+        <section>
+            <table border="1" width="100%">
+                <tr>
+                    <td width="45%" valign="top" align="center">
+                        <article>
+                            <h3>Get in Touch</h3>
+                            <p><strong>We would like to hear from you.</strong></p>
+                            <p>If you have any inquiries, feedback, or partnership ideas, please use the form on this page.</p>
+                            <p>Email: sportupdates@gmail.com</p>
+                            <p>Phone: +234 800 000 0000</p>
+                            <p>Lagos, Nigeria</p>
+                            <p class="contact-social">
+                                <img src="images/brand-icons/facebook.svg" width="40" height="40" alt="Facebook">
+                                <img src="images/brand-icons/instagram.svg" width="40" height="40" alt="Instagram">
+                                <img src="images/brand-icons/telegram.svg" width="40" height="40" alt="Telegram">
+                                <img src="images/brand-icons/x.svg" width="40" height="40" alt="X">
+                            </p>
+                        </article>
+                    </td>
+                    <td width="55%" valign="top">
+                        <form id="contact" name="contact" method="post" action="#">
+                            <table width="100%" cellpadding="8">
+                                <caption><h3>Contact Form</h3></caption>
+                                <tr>
+                                    <td><label for="firstname">First Name</label></td>
+                                    <td><input type="text" id="firstname" name="firstname" placeholder="Enter first name"></td>
+                                </tr>
+                                <tr>
+                                    <td><label for="lastname">Last Name</label></td>
+                                    <td><input type="text" id="lastname" name="lastname" placeholder="Enter last name"></td>
+                                </tr>
+                                <tr>
+                                    <td><label for="contact-phone">Phone Number</label></td>
+                                    <td><input type="tel" id="contact-phone" name="phone" placeholder="Enter phone number"></td>
+                                </tr>
+                                <tr>
+                                    <td><label for="contact-email">Email Address</label></td>
+                                    <td><input type="email" id="contact-email" name="email" placeholder="Enter email address"></td>
+                                </tr>
+                                <tr>
+                                    <td><label for="message">Message</label></td>
+                                    <td><textarea rows="5" cols="35" id="message" name="message" placeholder="Enter message"></textarea></td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2" align="center">
+                                        <input type="submit" value="Send Now">
+                                    </td>
+                                </tr>
+                            </table>
+                        </form>
+                    </td>
+                </tr>
+            </table>
+        </section>
+    </main>
+
+    <footer>
+        <table border="1" width="100%">
+            <tr>
+                <td align="center">
+                    <p>Zone14 Football. Copyright &copy; 2026. All rights reserved.</p>
+                </td>
+                <td width="20%" align="center">
+                    <img src="images/brand-icons/facebook.svg" width="40" height="40" alt="Facebook">
+                    <img src="images/brand-icons/instagram.svg" width="40" height="40" alt="Instagram">
+                    <img src="images/brand-icons/telegram.svg" width="40" height="40" alt="Telegram">
+                    <img src="images/brand-icons/x.svg" width="40" height="40" alt="X">
+                </td>
+            </tr>
+        </table>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

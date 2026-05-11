@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card Payment</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="page-card-payment">
+    <header>
+        <table border="1" width="100%">
+            <tr>
+                <td width="25%" align="center">
+                    <img src="images/logo.jpg" alt="Sports Updates logo" width="120" height="60">
+                </td>
+                <td width="75%" align="center">
+                    <h1>Zone14 Football</h1>
+                    <p>Your daily sports news, trends, and products in one place.</p>
+                </td>
+            </tr>
+        </table>
+    </header>
+
+    <nav>
+        <table border="1" width="100%">
+            <tr>
+                <td width="16.66%" align="center"><a href="index.html">Home</a></td>
+                <td width="16.66%" align="center"><a href="news.html">News</a></td>
+                <td width="16.66%" align="center"><a href="highlights.html">Highlights</a></td>
+                <td width="16.66%" align="center"><a href="product.html">Our Products</a></td>
+                <td width="16.66%" align="center"><a href="about.html">About Us</a></td>
+                <td width="16.66%" align="center"><a href="contact.html">Contact Us</a></td>
+            </tr>
+        </table>
+    </nav>
+
+    <main>
+        <section class="payment-hero">
+            <h2>Card Payment</h2>
+            <p>Complete your order securely with your preferred card.</p>
+        </section>
+
+        <section class="payment-card-section">
+            <form action="#" method="post" class="card-payment-form">
+                <table width="100%" cellpadding="8">
+                    <caption><h3>Enter Card Details</h3></caption>
+                    <tr>
+                        <td><label for="card-type">Card Type</label></td>
+                        <td>
+                            <select id="card-type" name="card-type">
+                                <option>Visa</option>
+                                <option>MasterCard</option>
+                                <option>Verve</option>
+                                <option>American Express</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="card-number">Card Number</label></td>
+                        <td><input type="text" id="card-number" name="card-number" placeholder="Enter card number"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="expiry-month">Expiry Month</label></td>
+                        <td><input type="text" id="expiry-month" name="expiry-month" placeholder="MM"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="expiry-year">Expiry Year</label></td>
+                        <td><input type="text" id="expiry-year" name="expiry-year" placeholder="YY"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="cvv">CVV</label></td>
+                        <td><input type="password" id="cvv" name="cvv" placeholder="Enter CVV"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" align="center">
+                            <input type="submit" value="Pay Now">
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <table border="1" width="100%">
+            <tr>
+                <td align="center">
+                   <p>Zone14 Football. Copyright &copy; 2026. All rights reserved.</p>
+                </td>
+                <td width="20%" align="center">
+                    <img src="images/brand-icons/facebook.svg" width="40" height="40" alt="Facebook">
+                    <img src="images/brand-icons/instagram.svg" width="40" height="40" alt="Instagram">
+                    <img src="images/brand-icons/telegram.svg" width="40" height="40" alt="Telegram">
+                    <img src="images/brand-icons/x.svg" width="40" height="40" alt="X">
+                </td>
+            </tr>
+        </table>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
