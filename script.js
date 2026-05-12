@@ -393,6 +393,13 @@ function setupContactForm() {
         document.getElementById("message")
     ];
     const submitButton = contactForm.querySelector('input[type="submit"]');
+    const contactStatus = document.createElement("p");
+
+    contactStatus.id = "contact-status";
+    contactStatus.style.textAlign = "center";
+    contactStatus.style.fontWeight = "bold";
+    contactStatus.style.marginTop = "12px";
+    contactForm.appendChild(contactStatus);
 
     requiredFields.forEach(function (field) {
         field.addEventListener("input", function () {
@@ -417,26 +424,38 @@ function setupContactForm() {
         });
 
         if (hasEmptyField) {
+            contactStatus.style.color = "red";
+            contactStatus.textContent = "Please fill in all contact information before sending your message.";
             alert("Please fill in all contact information before sending your message.");
             return;
         }
 
         if (!window.emailjs || !isEmailJsConfigured()) {
-            alert("EmailJS is not configured yet. Add your Public Key, Service ID, and Template ID in script.js.");
+            contactStatus.style.color = "red";
+            contactStatus.textContent = "EmailJS is not ready. Check your internet connection and EmailJS settings.";
+            alert("EmailJS is not ready. Check your internet connection and EmailJS settings.");
             return;
         }
 
         submitButton.value = "Sending...";
         submitButton.disabled = true;
+        contactStatus.style.color = "#0d3b66";
+        contactStatus.textContent = "Sending your message...";
 
         emailjs.sendForm(emailJsConfig.serviceId, emailJsConfig.templateId, contactForm, {
             publicKey: emailJsConfig.publicKey
         }).then(function () {
+            contactStatus.style.color = "green";
+            contactStatus.textContent = "Your message has been sent successfully.";
             alert("Your message has been sent successfully.");
             contactForm.reset();
         }).catch(function (error) {
+            const errorMessage = error.text || error.message || "Please check your EmailJS settings.";
+
             console.log("EmailJS error:", error);
-            alert("Sorry, your message could not be sent. EmailJS says: " + (error.text || error.message || "Please check your EmailJS settings."));
+            contactStatus.style.color = "red";
+            contactStatus.textContent = "EmailJS error: " + errorMessage;
+            alert("Sorry, your message could not be sent. EmailJS says: " + errorMessage);
         }).finally(function () {
             submitButton.value = "Send Now";
             submitButton.disabled = false;
