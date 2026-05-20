@@ -137,6 +137,10 @@ nav a:hover {
     box-shadow: 0 8px 18px rgba(255, 255, 255, 0.2);
 }
 
+.mobile-nav-bar {
+    display: none;
+}
+
 main {
     padding: 24px;
 }
@@ -651,12 +655,120 @@ footer img:hover {
 }
 
 @media (max-width: 900px) {
+    body {
+        background: #eef4f9;
+        font-size: 15px;
+    }
+
     main {
-        padding: 14px;
+        padding: 12px;
+    }
+
+    header table {
+        border-radius: 0 0 18px 18px;
+    }
+
+    header td {
+        padding: 18px 12px;
+    }
+
+    header img {
+        width: 88px;
+        height: 88px;
+        border-width: 4px;
     }
 
     header h1 {
-        font-size: 1.9rem;
+        font-size: 1.45rem;
+        letter-spacing: 0.04em;
+        line-height: 1.25;
+    }
+
+    header p {
+        font-size: 0.9rem;
+        line-height: 1.45;
+        margin: 0 auto;
+    }
+
+    header,
+    nav {
+        display: none;
+    }
+
+    .mobile-nav-bar {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        padding: 12px 14px;
+        background: #061b31;
+        box-shadow: 0 10px 24px rgba(6, 27, 49, 0.24);
+        position: sticky;
+        top: 0;
+        z-index: 20;
+    }
+
+    .mobile-nav-brand {
+        display: flex;
+        align-items: center;
+        gap: 9px;
+        min-width: 0;
+        flex: 1;
+        color: #ffffff;
+    }
+
+    .mobile-nav-brand img {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 2px solid #ffffff;
+        background: #ffffff;
+        flex: 0 0 auto;
+    }
+
+    .mobile-nav-brand strong {
+        display: block;
+        font-size: 0.92rem;
+        line-height: 1.15;
+        text-transform: uppercase;
+        letter-spacing: 0.06em;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .mobile-nav-bar label {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        overflow: hidden;
+        clip: rect(0 0 0 0);
+    }
+
+    .mobile-nav-bar select {
+        width: 40%;
+        min-width: 126px;
+        min-height: 48px;
+        padding: 10px 34px 10px 12px;
+        border: 0;
+        border-radius: 10px;
+        background:
+            linear-gradient(45deg, transparent 50%, #0d3b66 50%) calc(100% - 18px) 20px / 7px 7px no-repeat,
+            linear-gradient(135deg, #ffffff, #f3f8fc);
+        color: #0d3b66;
+        font-weight: bold;
+        font-size: 0.88rem;
+        outline: none;
+        appearance: none;
+        box-shadow:
+            inset 0 0 0 1px rgba(13, 59, 102, 0.16),
+            0 8px 18px rgba(0, 0, 0, 0.16);
+    }
+
+    .mobile-nav-bar select:focus {
+        box-shadow:
+            inset 0 0 0 2px #ffd166,
+            0 8px 18px rgba(0, 0, 0, 0.16);
     }
 
     table,
@@ -668,26 +780,187 @@ footer img:hover {
         width: 100% !important;
     }
 
+    table {
+        border: 0;
+        background: transparent;
+    }
+
     tr {
-        margin-bottom: 10px;
-    }
-
-    nav td {
-        border-bottom: 1px solid rgba(255, 255, 255, 0.14);
-    }
-
-    nav a {
-        font-size: 0.9rem;
+        margin-bottom: 12px;
     }
 
     td,
     th {
+        border: 0;
         text-align: left !important;
     }
 
+    main section {
+        margin-bottom: 14px;
+    }
+
+    main section > table,
+    main section > form > table,
+    main section article,
+    .team-card,
+    .payment-card-section,
+    .transfer-panel,
+    .delivery-success {
+        background: #ffffff;
+        border: 1px solid #d8e5ef;
+        border-radius: 8px;
+        box-shadow: 0 8px 18px rgba(13, 59, 102, 0.08);
+        overflow: hidden;
+    }
+
+    main section > table td,
+    main section > form > table td,
+    main section article {
+        padding: 14px;
+    }
+
+    caption {
+        display: block;
+        padding: 12px;
+        background: #0d3b66;
+        color: #ffffff;
+        border-radius: 8px 8px 0 0;
+    }
+
+    caption h2,
+    caption h3 {
+        margin: 0;
+        color: #ffffff;
+        font-size: 1.05rem;
+    }
+
+    h2 {
+        font-size: 1.35rem;
+        line-height: 1.3;
+    }
+
+    h3 {
+        font-size: 1.12rem;
+        line-height: 1.35;
+    }
+
+    p,
+    li {
+        line-height: 1.65;
+    }
+
+    ul {
+        padding-left: 18px;
+    }
+
     header td,
-    footer td {
+    footer td,
+    main section:first-of-type td {
         text-align: center !important;
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    main img {
+        display: block;
+        margin: 0 auto 10px;
+        border-radius: 8px;
+    }
+
+    .page-index main section article table,
+    .page-product main section article,
+    .page-about .team-card {
+        text-align: center;
+    }
+
+    .page-index main section article table td,
+    .page-product main section article,
+    .page-about .team-card {
+        text-align: center !important;
+    }
+
+    .page-index main section article img,
+    .page-product main section article img {
+        width: 100%;
+        max-width: 230px;
+        height: auto;
+        aspect-ratio: 1 / 1;
+        object-fit: cover;
+    }
+
+    .team-card {
+        margin-bottom: 14px;
+    }
+
+    .team-card img {
+        width: 100%;
+        max-width: 240px;
+        height: 280px;
+        object-fit: cover;
+        object-position: center top;
+    }
+
+    input,
+    textarea,
+    select {
+        width: 100%;
+        max-width: 100%;
+        min-height: 42px;
+        font-size: 1rem;
+    }
+
+    textarea {
+        min-height: 120px;
+    }
+
+    input[type="submit"],
+    button,
+    a[href="cart.html"],
+    a[href="checkout.html"] {
+        width: 100%;
+        text-align: center;
+        padding: 12px 14px;
+    }
+
+    .page-cart main section:nth-of-type(2),
+    .page-checkout main section:nth-of-type(2) {
+        overflow-x: auto;
+    }
+
+    .page-cart main section:nth-of-type(2) table,
+    .page-checkout main section:nth-of-type(2) table {
+        min-width: 0;
+    }
+
+    .page-cart main section:nth-of-type(2) tr,
+    .page-checkout main section:nth-of-type(2) tr {
+        background: #ffffff;
+        border: 1px solid #d8e5ef;
+        border-radius: 8px;
+        padding: 8px;
+    }
+
+    .page-cart main section:nth-of-type(2) th,
+    .page-checkout main section:nth-of-type(2) th {
+        display: none;
+    }
+
+    .payment-hero {
+        margin-bottom: 16px;
+        padding: 4px 8px;
+    }
+
+    .payment-hero h2 {
+        font-size: 1.55rem;
+    }
+
+    .card-payment-form,
+    .transfer-panel,
+    .delivery-success {
+        padding: 18px;
     }
 
     .transfer-detail {
@@ -698,5 +971,41 @@ footer img:hover {
     .transfer-detail strong {
         display: block;
         margin-top: 8px;
+    }
+
+    .success-check {
+        width: 72px;
+        height: 72px;
+        line-height: 72px;
+        font-size: 2.8rem;
+    }
+
+    footer td {
+        padding: 14px;
+    }
+}
+
+@media (min-width: 901px) and (max-width: 1200px) {
+    main {
+        padding: 22px;
+    }
+
+    header h1 {
+        font-size: 2.1rem;
+    }
+
+    nav a {
+        font-size: 0.9rem;
+        padding: 11px 8px;
+    }
+
+    .team-card img {
+        width: 160px;
+        height: 190px;
+    }
+
+    main img {
+        max-width: 100%;
+        height: auto;
     }
 }

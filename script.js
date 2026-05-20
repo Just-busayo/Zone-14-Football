@@ -463,6 +463,54 @@ function setupContactForm() {
     });
 }
 
+function setupMobileNavigation() {
+    const header = document.querySelector("header");
+    const nav = document.querySelector("nav");
+
+    if (!header || !nav || document.querySelector(".mobile-nav-bar")) {
+        return;
+    }
+
+    const logo = header.querySelector("img");
+    const siteName = header.querySelector("h1")?.textContent.trim() || "Zone14 Football";
+    const navLinks = nav.querySelectorAll("a");
+    const currentPage = window.location.pathname.split("/").pop() || "index.html";
+    const mobileNav = document.createElement("div");
+
+    mobileNav.className = "mobile-nav-bar";
+    mobileNav.innerHTML = `
+        <div class="mobile-nav-brand">
+            <img src="${logo?.getAttribute("src") || "images/logo.jpg"}" alt="Zone14 Football logo">
+            <strong>${siteName}</strong>
+        </div>
+        <label for="mobile-page-menu">Menu</label>
+        <select id="mobile-page-menu" aria-label="Choose page"></select>
+    `;
+
+    const mobileSelect = mobileNav.querySelector("select");
+
+    navLinks.forEach(function (link) {
+        const option = document.createElement("option");
+        const linkPage = link.getAttribute("href");
+
+        option.value = linkPage;
+        option.textContent = link.textContent.trim();
+
+        if (linkPage === currentPage) {
+            option.selected = true;
+        }
+
+        mobileSelect.appendChild(option);
+    });
+
+    mobileSelect.addEventListener("change", function () {
+        window.location.href = mobileSelect.value;
+    });
+
+    nav.parentNode.insertBefore(mobileNav, nav);
+}
+
+setupMobileNavigation();
 setupAddToCartButtons();
 renderCart();
 renderCheckoutSummary();
