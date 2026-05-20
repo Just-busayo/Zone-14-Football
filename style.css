@@ -870,6 +870,19 @@ footer img:hover {
         border-radius: 8px;
     }
 
+    .contact-social {
+        text-align: center;
+        white-space: nowrap;
+    }
+
+    .contact-social img {
+        display: inline-block;
+        width: 28px;
+        height: 28px;
+        margin: 0 7px;
+        vertical-align: middle;
+    }
+
     .page-index main section article table,
     .page-product main section article,
     .page-about .team-card {
